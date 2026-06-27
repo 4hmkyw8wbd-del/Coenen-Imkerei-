@@ -1,29 +1,28 @@
 import Section from './Section'
 import Reveal from './Reveal'
 import { about } from '../data/content'
+import beesOnComb from '../assets/bees-on-comb.jpg'
 
 /** Sektion "Über die Imkerei" mit ruhiger Bild-/Text-Komposition und Eckdaten. */
 export default function AboutApiary() {
   return (
     <Section id="imkerei" aria-label="Über die Imkerei" className="bg-natural">
       <div className="grid items-center gap-12 lg:grid-cols-2">
-        {/* Bildplatzhalter */}
+        {/* Echtes Bild aus dem Bienenvolk */}
         <Reveal className="order-last lg:order-first">
-          <div
-            role="img"
-            aria-label="Ruhige Naturaufnahme der Imkerei mit Bienenstöcken auf einer Wiese (Bildplatzhalter)"
-            className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-wood/10 bg-gradient-to-br from-forest/90 to-forest shadow-lift"
-          >
-            <div className="absolute inset-0 honeycomb-bg opacity-30" />
-            <div className="absolute inset-0 flex items-end p-6">
-              <span className="rounded-full bg-natural/90 px-4 py-2 text-xs font-medium text-forest">
-                Bildplatzhalter · ruhige Naturaufnahme
-              </span>
-            </div>
-            {/* angedeutete Beuten */}
-            <div className="absolute bottom-1/3 left-8 h-16 w-12 rounded-md bg-honeycream/80" />
-            <div className="absolute bottom-1/3 left-24 h-20 w-12 rounded-md bg-honeygold/70" />
-            <div className="absolute bottom-1/3 right-12 h-14 w-12 rounded-md bg-wood/60" />
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-wood/10 shadow-lift">
+            <img
+              src={beesOnComb}
+              alt="Dicht von Bienen besetzte Wabe bei der Durchsicht eines Volkes"
+              width={1024}
+              height={1800}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-forest/40 via-transparent to-transparent" />
+            <span className="absolute bottom-5 left-5 rounded-full bg-natural/90 px-4 py-1.5 text-xs font-medium text-forest shadow-soft">
+              Durchsicht im Bienenvolk
+            </span>
           </div>
         </Reveal>
 

@@ -4,6 +4,7 @@ import Reveal from './Reveal'
 import PollenField from './PollenField'
 import { pollination } from '../data/content'
 import { getIcon } from './icons'
+import beesOnComb from '../assets/bees-on-comb.jpg'
 
 /**
  * Bestaeubungs-Sektion: wissenschaftlich differenziert formuliert.
@@ -13,8 +14,20 @@ import { getIcon } from './icons'
 export default function PollinationSection() {
   return (
     <Section id="bestaeubung" aria-label="Bestäubungsleistung der Bienen" className="relative overflow-hidden bg-forest text-natural">
+      {/* Echtes Foto als ueberlagerter Hintergrund, Inhalt liegt transparent darueber */}
+      <img
+        src={beesOnComb}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-b from-forest/95 via-forest/[0.88] to-forest/95"
+      />
       <PollenField count={18} />
-      <div className="relative">
+      <div className="relative z-10">
         <SectionHeader eyebrow={pollination.eyebrow} title={pollination.title} />
         <Reveal className="mx-auto mt-5 max-w-3xl text-center">
           <p className="text-base leading-relaxed text-natural/80 sm:text-lg">{pollination.intro}</p>

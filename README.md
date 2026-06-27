@@ -50,8 +50,20 @@ Komponenten aus.
 - Rechtliche Pflichtseiten: Impressum, Datenschutz, Lebensmittelkennzeichnung
   (Footer – aktuell als Platzhalter markiert)
 - Quellenangaben in der Wissens-Sektion konkretisieren
-- Bilder: aktuell stilisierte CSS-Platzhalter; durch echte, hochwertige
-  Naturaufnahmen (mit Alt-Texten) ersetzen
+- Bilder: echte Imkereifotos sind in Hero, Imkerei, Prozess und Bestäubung
+  eingebunden (`src/assets/`). Weitere Bereiche (Produkte, Region) nutzen noch
+  stilisierte Platzhalter und können bei Bedarf mit Fotos ergänzt werden.
+
+## Bilder aufbereiten
+
+Originalfotos werden mit `sharp` web-optimiert (max. ~1800 px, JPEG):
+
+```bash
+SRC_DIR=/pfad/zu/originalen npm run optimize-images
+```
+
+Das Skript (`scripts/optimize-images.mjs`) schreibt nach `src/assets/`
+(Inhaltsbilder) und `public/og-image.jpg` (Vorschaubild für Social Media).
 
 ## Wichtige inhaltliche Leitplanken
 

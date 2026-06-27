@@ -3,6 +3,7 @@ import { ArrowRight, Check } from 'lucide-react'
 import { hero } from '../data/content'
 import { usePrefersReducedMotion } from '../hooks/useReducedMotion'
 import PollenField from './PollenField'
+import honeycombFrame from '../assets/honeycomb-frame.jpg'
 
 /**
  * Hero-Sektion mit warmem Naturverlauf, halbtransparenten Hexagon-Elementen,
@@ -59,25 +60,22 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Bildplatzhalter mit Honigglas-Anmutung */}
+        {/* Echtes Fokusbild: sonnenbeschienene Wabe voller Bienen */}
         <motion.div style={{ y: yArt }} className="relative hidden lg:block">
-          <div
-            role="img"
-            aria-label="Warme Naturszene mit Honigglas, Wabe und Wiese (Bildplatzhalter)"
-            className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-white/40 bg-gradient-to-b from-honeycream to-honeygold/70 shadow-lift"
-          >
-            <div className="absolute inset-0 honeycomb-bg opacity-40" />
-            {/* Stilisiertes Honigglas */}
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-center pb-10">
-              <div className="relative h-52 w-40">
-                <div className="absolute inset-x-4 -top-3 h-5 rounded-t-md bg-wood/80" />
-                <div className="absolute inset-0 top-3 rounded-2xl bg-gradient-to-b from-honeygold to-wood/90 shadow-inner" />
-                <div className="absolute inset-x-5 top-16 rounded-md bg-natural/85 px-2 py-4 text-center">
-                  <span className="block font-display text-sm font-semibold text-forest">Imkerei Coenen</span>
-                  <span className="mt-1 block text-[10px] uppercase tracking-wider text-wood">Naturbelassen</span>
-                </div>
-              </div>
-            </div>
+          <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-[2rem] border border-white/50 shadow-lift">
+            <img
+              src={honeycombFrame}
+              alt="Sonnenbeschienene Honigwabe mit Bienen aus einem unserer Völker"
+              width={1800}
+              height={1350}
+              loading="eager"
+              fetchPriority="high"
+              className="h-full w-full object-cover"
+            />
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-forest/35 via-transparent to-transparent" />
+            <span className="absolute bottom-4 left-4 rounded-full bg-natural/90 px-3.5 py-1.5 text-xs font-semibold text-forest shadow-soft">
+              Aus unseren Völkern
+            </span>
           </div>
         </motion.div>
       </div>
