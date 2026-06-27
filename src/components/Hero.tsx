@@ -61,8 +61,8 @@ export default function Hero() {
         </motion.div>
 
         {/* Echtes Fokusbild: sonnenbeschienene Wabe voller Bienen */}
-        <motion.div style={{ y: yArt }} className="relative hidden lg:block">
-          <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-[2rem] border border-white/50 shadow-lift">
+        <motion.div style={{ y: yArt }} className="relative block">
+          <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-[1.5rem] border border-white/50 shadow-lift sm:rounded-[2rem]">
             <img
               src={honeycombFrame}
               alt="Sonnenbeschienene Honigwabe mit Bienen aus einem unserer Völker"
