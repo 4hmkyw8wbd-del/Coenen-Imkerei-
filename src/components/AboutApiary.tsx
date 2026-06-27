@@ -1,27 +1,27 @@
 import Section from './Section'
 import Reveal from './Reveal'
 import { about } from '../data/content'
-import beesOnComb from '../assets/bees-on-comb.jpg'
+import queenOnComb from '../assets/queen-on-comb.jpg'
 
 /** Sektion "Über die Imkerei" mit ruhiger Bild-/Text-Komposition und Eckdaten. */
 export default function AboutApiary() {
   return (
     <Section id="imkerei" aria-label="Über die Imkerei" className="bg-natural">
       <div className="grid items-center gap-12 lg:grid-cols-2">
-        {/* Echtes Bild aus dem Bienenvolk */}
+        {/* Echtes Bild: die gezeichnete Königin im Volk */}
         <Reveal className="order-last lg:order-first">
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-wood/10 shadow-lift">
             <img
-              src={beesOnComb}
-              alt="Dicht von Bienen besetzte Wabe bei der Durchsicht eines Volkes"
-              width={1024}
+              src={queenOnComb}
+              alt="Gezeichnete Bienenkönigin mit blauem Punkt, umgeben von ihrem Hofstaat auf der Wabe"
+              width={1350}
               height={1800}
               loading="lazy"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-forest/40 via-transparent to-transparent" />
             <span className="absolute bottom-5 left-5 rounded-full bg-natural/90 px-4 py-1.5 text-xs font-medium text-forest shadow-soft">
-              Durchsicht im Bienenvolk
+              Gezeichnete Königin im Volk
             </span>
           </div>
         </Reveal>

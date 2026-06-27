@@ -50,9 +50,10 @@ Komponenten aus.
 - Rechtliche Pflichtseiten: Impressum, Datenschutz, Lebensmittelkennzeichnung
   (Footer – aktuell als Platzhalter markiert)
 - Quellenangaben in der Wissens-Sektion konkretisieren
-- Bilder: echte Imkereifotos sind in Hero, Imkerei, Prozess und Bestäubung
-  eingebunden (`src/assets/`). Weitere Bereiche (Produkte, Region) nutzen noch
-  stilisierte Platzhalter und können bei Bedarf mit Fotos ergänzt werden.
+- Bilder: echte Imkereifotos sind in Hero, Imkerei (gezeichnete Königin),
+  Prozess, Bestäubung und Region (Rapsblüte als Hintergrund) eingebunden
+  (`src/assets/`). **Offen:** die Produktkarten (`ProductsPreview`) nutzen noch
+  stilisierte Platzhalter – hierfür fehlen echte Honigglas-/Produktfotos.
 
 ## Bilder aufbereiten
 

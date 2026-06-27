@@ -27,6 +27,8 @@ const jobs = [
   { src: '263aba60-IMG_3115.jpeg', out: join(assetsDir, 'honeycomb-frame.jpg'), max: 1800, q: 80 },
   { src: '431d29b7-IMG_2891.jpeg', out: join(assetsDir, 'bees-on-comb.jpg'), max: 1800, q: 80 },
   { src: 'cfa350ba-IMG_2827.jpeg', out: join(assetsDir, 'honey-filtering.jpg'), max: 1800, q: 80 },
+  { src: '96483c57-IMG_2404.jpeg', out: join(assetsDir, 'queen-on-comb.jpg'), max: 1800, q: 80 },
+  { src: '78f52829-IMG_2485.jpeg', out: join(assetsDir, 'rapeseed-field.jpg'), max: 1800, q: 80 },
   { src: '263aba60-IMG_3115.jpeg', out: join(publicDir, 'og-image.jpg'), max: 1200, q: 78 },
 ]
 
